@@ -44,7 +44,7 @@ public class EventoController {
 
         System.out.println(ini.toString());
 
-        List<Evento> eventos = dao.findByDataevtBetween(ini, fim);
+        List<Evento> eventos = dao.findByDataevtBetweenOrderByDataevt(ini, fim);
         
         return ResponseEntity.ok(eventos);
     }
